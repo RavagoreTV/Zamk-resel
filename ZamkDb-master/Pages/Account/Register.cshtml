@@ -7,7 +7,7 @@
 <body style="background-color: rgba(244, 217, 107, 255);">
 </body>
 </html>
-<center>
+@*<center>*@
 
     <h1>Please enter information about yourself</h1>
 <div class="row">
@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="form-group">
-                <label>Wan to be driver? check the box</label>
+                <label>Want to be a driver? Check the box</label>
 				<input asp-for="@Model.Registration.canBeDriver" class="form-control" />
 				<span asp-validation-for="@Model.Registration.canBeDriver" class="text-danger"></span>
 			</div>
@@ -57,4 +57,4 @@
 		</form>
 	</div>
 </div>
-</center>
+@*</center>*@
