@@ -2,6 +2,7 @@
 @using Microsoft.AspNet.Identity
 @model ZamkDb.Pages.Bookings.BookingConfirmModel
 @{
+    ViewData["Title"] = "Booking Conformed";
     var id = User.Identity.GetUserId();
     Model.Booking.ParticipantId = id;
 }

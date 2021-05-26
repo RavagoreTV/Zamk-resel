@@ -1,8 +1,10 @@
 ﻿@page
 @model ZamkDb.Pages.Courses.CreateModel
 @using Microsoft.AspNet.Identity
-@{ var id = User.Identity.GetUserId();
-                Model.Course.UserId = id;
+@{ 
+    ViewData["Title"] = "Create course";
+    var id = User.Identity.GetUserId();
+    Model.Course.UserId = id;
 }
 
 

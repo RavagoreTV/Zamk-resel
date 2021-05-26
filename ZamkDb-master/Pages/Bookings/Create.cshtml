@@ -5,6 +5,7 @@
 @using ZamkDb.Pages.Courses
 @using System.Diagnostics.Contracts
 @{
+    ViewData["Title"] = "Create booking";
     var id = User.Identity.GetUserId();
     Model.Booking.ParticipantId = id;
 

@@ -2,6 +2,7 @@
 @model ZamkDb.Pages.Account.ManageYourAccountModel
 @using Microsoft.AspNet.Identity
 @{
+    ViewData["Title"] = "Manage Your Account";
     var id = User.Identity.GetUserId();
     Model.Participant.Id = id;
 }
