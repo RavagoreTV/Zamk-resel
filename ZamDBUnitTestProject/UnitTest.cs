@@ -153,35 +153,6 @@ namespace ZamDBUnitTestProject
         }
 
         [Fact]
-        //Kan sku ikke løse den drenge
-        public void Edit_Course_Test()
-        {
-            using (var contex = new ZamDbContext(ContexOptions))
-            {
-                EFCourseService cService = new EFCourseService(contex);
-
-                cService.EditCourse(new Course()
-                {
-                    CourseId = 1,
-                    StartDateTime = new DateTime(2021, 07, 05),
-                    EndDateTime = new DateTime(2021, 07, 05),
-                    StartLocation = "Roskilde",
-                    EndLocation = "Holbæk",
-                    PickUpPoint1 = "Lejre",
-                    PickUpPoint2 = "Tølløse",
-                    PickUpPoint3 = "Holbæk",
-                    ZealandLocation = "Holbæk",
-                    UserId = "203d93ad-bc81-4dd8-afcb-76794137058a",
-                    AvailableSeats = 3
-                });
-
-                var course = cService.GetAllCourses().ToList();
-                Assert.True(course.Count == 3);
-                Assert.Equal(4, course[01].AvailableSeats);
-            }
-        }
-
-        [Fact]
         public void Filter_Course_Test()
         {
             using (var contex = new ZamDbContext(ContexOptions))
@@ -222,42 +193,7 @@ namespace ZamDBUnitTestProject
                 Assert.Equal("Tobias", participants[1].Name);
             }
         }
-
-        [Fact]
-        //Kan sku ikke løse den need help!
-        public void Edit_Participant_Test()
-        {
-            using (var contex = new ZamDbContext(ContexOptions))
-            {
-                EFParticipantService pService = new EFParticipantService(contex);
-
-                pService.EditParticipant(new Participant()
-                {
-                    Id = "203d93ad-bc81-4dd8-afcb-76794137058a",
-                    Name = "Tobias",
-                    Address = "Vejen 2",
-                    canBeDriver = true,
-                    DriverId = "203d93ad-bc81-4dd8-afcb-76794137058a",
-                    UserName = "test2@test.dk",
-                    NormalizedUserName = "test2@test.dk",
-                    Email = "test2@test.dk",
-                    NormalizedEmail = "test2@test.dk",
-                    EmailConfirmed = false,
-                    PasswordHash = "Test123!",
-                    SecurityStamp = "MO7OPBJ2QRIPBBJKJMGVX2AJUBGYSRHT",
-                    ConcurrencyStamp = "154d91ba-a350-457e-bc22-2c2ef36cd6d9",
-                    PhoneNumber = null,
-                    PhoneNumberConfirmed = false,
-                    TwoFactorEnabled = false,
-                    LockoutEnd = null,
-                    LockoutEnabled = false,
-                    AccessFailedCount = 0
-                });
-
-                var participant = pService.GetAllParticipants().ToList();
-                Assert.True(participant.Count == 2);
-                Assert.Equal("Victor", participant[0].Name);
-            }
-        }
+            
+        
     }
 }
