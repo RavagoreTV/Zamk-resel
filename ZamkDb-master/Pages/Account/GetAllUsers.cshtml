@@ -9,7 +9,7 @@
 <body style="background-color: rgba(244, 217, 107, 255);">
 </body>
 </html>
-
+<center>
 
 @if (Model.Users.Count() != 0)
 {
@@ -52,11 +52,11 @@ else
 {
 	<div class="card">
 		<div class="card-header">
-			No users created yet
+			Not users created yet
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
-				Use the button below to create a user
+				Use the button below to become a user
 			</h5>
 			<a class="btn btn-dark" style="width:auto" asp-page="Accounts/Registration">
 				Create User
@@ -64,3 +64,4 @@ else
 		</div>
 	</div>
 }
+</center>

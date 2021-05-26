@@ -8,7 +8,7 @@
 <body style="background-color: rgba(244, 217, 107, 255);">
 </body>
 </html>
-
+<center>
 <p>
     <a class="btn btn-dark" asp-page="/Courses/Create">Create New Course</a>
 </p>
@@ -35,12 +35,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Zealand Location: @p.ZealandLocation</h5>
                             <a asp-page="/Courses/Detail" asp-route-id="@p.CourseId" class="btn btn-dark">More information</a>
-                            @if (User.Identity.GetUserId() == p.UserId)
-                            {
-                                <a asp-page="Delete" asp-route-id="@p.CourseId" class="btn btn-danger m-1">Delete</a>
-                                <a asp-page="Edit" asp-route-id="@p.CourseId" class="btn btn-dark m-1">Edit</a>
-
-                            }
+                            <a asp-page="Delete" asp-route-id="@p.CourseId" class="btn btn-danger m-1">Delete</a>
+                            <a asp-page="Edit" asp-route-id="@p.CourseId" class="btn btn-dark m-1">Edit</a>
                         </div>
                     </div>
                     <br />
@@ -49,3 +45,4 @@
         }
     </div>
 </div>
+</center>

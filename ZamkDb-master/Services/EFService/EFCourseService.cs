@@ -16,15 +16,14 @@ namespace ZamkDb.Services.EFService
 		{
 			_context = context;
 		}
+		public Course GetCourse(int id)
+		{
+			return _context.Courses.Find(id);
+		}
 
 		public IEnumerable<Course> GetAllCourses()
 		{
 			return _context.Courses;
-		}
-
-		public Course GetCourse(int id)
-		{
-			return _context.Courses.Find(id);
 		}
 
 		public Course AddCourse(Course c)

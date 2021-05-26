@@ -31,7 +31,7 @@ namespace ZamkDb.Pages.Courses
 		public IActionResult OnPost(int id)
 		{
 			repo.DeleteCourse(id);
-			return RedirectToPage("GetAllCourses");
+			return RedirectToPage("MyCourses");
 		}
 	}
 }

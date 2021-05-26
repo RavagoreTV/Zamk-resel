@@ -24,7 +24,6 @@ namespace ZamkDb.Services.EFService
 				.AsNoTracking()
 				.FirstOrDefault(m => m.Id == id);
 			return participant;
-			//return _context.Participants.Find(id);
 		}
 
 		public IEnumerable<Participant> GetAllParticipants()
@@ -37,12 +36,8 @@ namespace ZamkDb.Services.EFService
             var participant = _context.Participants.Where(pa => pa.Id == p.Id).FirstOrDefault();
             participant.canBeDriver = p.canBeDriver;
             participant.Address = p.Address;
-            //_context.Participants.Add(participant);
             _context.SaveChanges();
 
-            //var Participant = _context.Participants.Attach(p);
-            //Participant.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            //_context.SaveChanges();
             return participant;
             
         }

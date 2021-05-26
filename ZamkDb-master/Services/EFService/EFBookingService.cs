@@ -17,6 +17,18 @@ namespace ZamkDb.Services.EFService
 			_context = context;
 		}
 
+		public Booking GetBooking(int id)
+		{
+
+			return _context.Bookings.Find(id);
+		}
+
+		public IEnumerable<Booking> GetAllBookings()
+		{
+			var booking = _context.Bookings.Include(p => p.Participant).Include(c => c.Course).ThenInclude(u => u.User);
+			return booking;
+		}
+
 		public Booking AddBooking(Booking booking)
 		{
 			_context.Bookings.Add(booking);
@@ -35,21 +47,5 @@ namespace ZamkDb.Services.EFService
 
 			return booking;
 		}
-
-		public Booking GetBooking(int id)
-		{
-			
-			return _context.Bookings.Find(id);
-		}
-
-		public IEnumerable<Booking> GetAllBookings()
-		{
-			//Virker med Programmet
-            var booking = _context.Bookings.Include(p => p.Participant).Include(c => c.Course).ThenInclude(u => u.User);
-            return booking;
-
-            //Virker kun ved unitTest
-            //return _context.Bookings;
-        }
 	}
 }

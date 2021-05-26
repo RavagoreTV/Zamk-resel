@@ -11,6 +11,7 @@
 <body style="background-color: rgba(244, 217, 107, 255);">
 </body>
 </html>
+<center>
 <h4 style="		color: cornflowerblue"> List of Courses</h4>
 <form>
     <p>
@@ -36,7 +37,6 @@
                             <p class="card-text">Start time: @p.StartDateTime</p>
                             <p class="card-text">ETA: @p.EndDateTime</p>
 	                        <p class="card-text">Available Seats: @p.AvailableSeats</p>
-	                        @*<p class="card-text">Driver: @Model.Course.User.Name</p>*@
                             <a asp-page="/Courses/Detail" asp-route-id="@p.CourseId" class="btn btn-dark">More information</a>
                             <a asp-page="/Bookings/Create" asp-route-tid="@p.CourseId" class="btn btn-dark">Book </a>
 
@@ -49,3 +49,4 @@
         }
     </div>
 </div>
+</center>

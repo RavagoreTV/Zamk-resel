@@ -34,7 +34,7 @@ namespace ZamkDb.Pages.Courses
         {
             UId = uid;
             Courses = context.Courses;
-            //Courses = _repo.GetAllCourses();
+            
 
             if (!string.IsNullOrEmpty(FilterCriteria))
             {

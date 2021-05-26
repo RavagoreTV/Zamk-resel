@@ -8,9 +8,12 @@ namespace ZamkDb.Services.Interface
 {
 	public interface IBookingService
 	{
-		IEnumerable<Booking> GetAllBookings();
-		Booking AddBooking(Booking booking);
-		Booking DeleteBooking(int id);
 		Booking GetBooking(int id);
+
+		IEnumerable<Booking> GetAllBookings();
+
+		Booking AddBooking(Booking booking);
+
+		Booking DeleteBooking(int id);
 	}
 }

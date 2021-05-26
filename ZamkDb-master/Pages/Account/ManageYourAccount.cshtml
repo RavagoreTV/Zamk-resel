@@ -10,7 +10,7 @@
 <body style="background-color: rgba(244, 217, 107, 255);">
 </body>
 </html>
-
+<center>
 <h1>Registration of the user</h1>
 <div class="row">
     <div class="col-md-4">
@@ -34,7 +34,7 @@
             </div>
             
             <div class="form-group">
-                <label asp-for="@Model.Participant.canBeDriver" class="control-label"></label>
+                <label>Wan to be driver? check the box</label>
                 <input asp-for="@Model.Participant.canBeDriver" class="form-control" />
                 <span asp-validation-for="@Model.Participant.canBeDriver" class="text-danger"></span>
             </div>
@@ -57,3 +57,4 @@
         </form>
     </div>
 </div>
+</center>

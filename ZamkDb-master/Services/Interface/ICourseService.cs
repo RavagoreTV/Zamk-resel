@@ -9,8 +9,8 @@ namespace ZamkDb.Services.Interface
 {
 	public interface ICourseService
 	{
-		IEnumerable<Course> GetAllCourses();
 		Course GetCourse(int id);
+		IEnumerable<Course> GetAllCourses();
 		Course AddCourse(Course c);
 
 		Course DeleteCourse(int id);
