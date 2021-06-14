@@ -94,7 +94,7 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Course.UserId"></label><input asp-for="@Model.Course.UserId" class="form-control" readonly="readonly" />
+        <label hidden="hidden" asp-for="Course.UserId"></label><input hidden="hidden" asp-for="@Model.Course.UserId" class="form-control" readonly="readonly" />
         <span asp-validation-for="@Model.Course.UserId" class="text-danger"></span>
     </div>
 
