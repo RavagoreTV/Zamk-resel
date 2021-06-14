@@ -36,6 +36,7 @@ namespace ZamkDb.Services.EFService
             var participant = _context.Participants.Where(pa => pa.Id == p.Id).FirstOrDefault();
             participant.canBeDriver = p.canBeDriver;
             participant.Address = p.Address;
+            participant.Name = p.Name;
             _context.SaveChanges();
 
             return participant;
