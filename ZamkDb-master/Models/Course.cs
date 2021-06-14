@@ -16,10 +16,12 @@ namespace ZamkDb.Models
 		//[Required]
 		[StringLength(15)]
 		public string ZealandLocation { get; set; }
+		[Required]
 		public string StartLocation { get; set; }
+		[Required]
 		public string EndLocation { get; set; }
 
-		//[Required]
+		[Required]
 		[StringLength(50)]
 		public string PickUpPoint1 { get; set; }
 		[StringLength(50)]
