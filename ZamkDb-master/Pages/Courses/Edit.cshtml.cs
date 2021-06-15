@@ -19,8 +19,8 @@ namespace ZamkDb.Pages.Courses
             this.repository = repository;
         }
 
-        [BindProperty]
-        public Course Course { get; set; } = new Course();
+		[BindProperty]
+		public Course Course { get; set; } = new Course();
 
         public IActionResult OnGet(int id)
         {
